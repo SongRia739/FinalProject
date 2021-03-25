@@ -102,42 +102,53 @@ namespace FinalProject
                 //
                 case 4:
                     textLabel.Text = "Having known Johnny for most of your teenage years up until now, " +
-                        "its safe to say you didn't know when these feelings arised" +
+                        "its safe to say you didn't know when these feelings arised. You let out a " +
+                        "groan as you fiddled with the pencil you fround on the ground 10 minutes ago. " +
                         "\n\nPress the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
                 //
                 case 5:
-                    textLabel.Text = "You and Lucas were in two different worlds, it was hard to say that you two would have ever cross paths" +
+                    textLabel.Text = "You and Lucas were in two different worlds, " +
+                        "it was hard to say that you two would have ever cross paths" +
                         "\n\nPress the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
                 //
                 case 6:
-                    textLabel.Text = "All you knew was that you were madly in love with your best friend and didn't know what to do" +
+                    textLabel.Text = "All you knew was that you were madly in love with your best friend " +
+                        "and didn't know what to do. Man this sucks." +
                         "\n\nPress the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
                 //
                 case 7:
-                    textLabel.Text = "You kind of forget how you got  a crush on such a jerk but that wasn't that did not matter now. " +
+                    textLabel.Text = "You kind of forget how you got a crush on such a jerk in the first place. " +
+                        "Was he ever mean to you though? No, but one time he accidently knocked your laptop over" +
+                        " and while it wasn't broken, you've always held a grudge. " +
+                        " But that did not matter now. " +
                         "\n\nPress the Space Bar to continue";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
                 //
                 case 8:
-                    textLabel.Text = "You let out a sigh as you mindlessly scanned through your code which was due in a few days." +
+                    textLabel.Text = "You let out a sigh as you mindlessly scanned " +
+                        "through your assignment which was due in a few days. " +
+                        "It was to create a game in 5 days, like seriously, who could do that?" +
                         "\n\nPress the Space Bar to continue";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
                 //
                 case 9:
-                    textLabel.Text = "What mattered now was how said man had his chest in direct contact with your back on the very crowded bus" +
+                    textLabel.Text = "What mattered now was how said man had his chest " +
+                        "in direct contact with your back on the very crowded bus." +
+                        " You purse your lips together in only slight annoyance and Lucas " +
+                        "seemed to give zero personal space, not that you minded it THAT much though." +
                         "\n\nPress the Space Bar to continue";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -154,7 +165,7 @@ namespace FinalProject
                 case 11:
                     textLabel.Text = "The bus encounters a pothole and you feel Lucas' body jerk forward";
                     NLabel.Text = "Hold on to the railing and thank the stars for this opportunity";
-                    MLabel.Text = "Use your shoulders to keep him upright";
+                    MLabel.Text = "Try to use your shoulders to keep him upright";
                     break;
                 //
                 case 12:
@@ -165,14 +176,16 @@ namespace FinalProject
                     break;
                 //
                 case 13:
-                    textLabel.Text = "He's quite surprised you were able to help him without much effort" +
+                    textLabel.Text = "To both of your surprise, you manage to keep steady as the bus passes the pot hole." +
+                        "He's quite surprised you seemed to help him without much effort, but you're quite surprised yourself." +
                         "\n\nPress the Space Bar to continue";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
                 //
                 case 14:
-                    textLabel.Text = "Lucas lets out a somewhat unapologetic sorry and get's off at the next stop, it was nice while it lasted";
+                    textLabel.Text = "Lucas lets out a somewhat unapologetic sorry and get's off at the next stop, it was nice while it lasted." +
+                        "You gently hit your head on the railing in defeat. \n\n What a jerk.";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
