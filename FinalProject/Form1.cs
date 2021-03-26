@@ -13,9 +13,40 @@ namespace FinalProject
     public partial class Form1 : Form
     {
         int scene = 0;
+
+        string gameState = "";
+
+        int playerX = 600;
+        int playerY = 490;
+        int playerWidth = 100;
+        int playerHeight = 10;
+        int playerSpeed = 10;
+
+        List<int> ballXList = new List<int>();
+        List<int> ballYList = new List<int>();
+        List<int> ballSpeedList = new List<int>();
+        List<string> ballColourList = new List<string>();
+        int ballSize = 10;
+
+        int score = 3000;
+
+        bool leftArrow = false;
+        bool rightArrow = false;
+
+        SolidBrush orangeBrush = new SolidBrush(Color.Orange);
+        SolidBrush coralBrush = new SolidBrush(Color.Coral);
+        SolidBrush purpleBrush = new SolidBrush(Color.MediumPurple);
+        SolidBrush indigoBrush = new SolidBrush(Color.Indigo);
+        SolidBrush blackBrush = new SolidBrush(Color.Black);
+        SolidBrush whiteBrush = new SolidBrush(Color.White);
+
+        Random randGen = new Random();
+        int randValue = 0;
+
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -33,6 +64,7 @@ namespace FinalProject
                 //lucas
                 else if (scene == 3) { scene = 0; }
                 else if (scene == 11) { scene = 13; }
+                else if (scene == 33) { scene = 36; }
             }
             else if (e.KeyCode == Keys.N) //choice 2
             {
@@ -47,6 +79,7 @@ namespace FinalProject
                 //lucas
                 else if (scene == 3) { scene = 5; }
                 else if (scene == 11) { scene = 14; }
+                else if (scene == 33) { scene = 37; }
             }
             else if (e.KeyCode == Keys.Space) //continue 
             {
@@ -63,6 +96,7 @@ namespace FinalProject
                 else if (scene == 19) { scene = 18; }
                 else if (scene == 22) { scene = 24; }
                 else if (scene == 23) { scene = 26; }
+                else if (scene == 26) { scene = 34; }
 
                 //lucas route
                 else if (scene == 5) { scene = 7; }
@@ -71,6 +105,13 @@ namespace FinalProject
                 else if (scene == 13) { scene = 16; }
                 else if (scene == 16) { scene = 21; }
                 else if (scene == 21) { scene = 25; }
+                else if (scene == 25) { scene = 27; }
+                else if (scene == 27) { scene = 29; }
+                else if (scene == 29) { scene = 31; }
+                else if (scene == 30) { scene = 32; }
+                else if (scene == 31) { scene = 33; }
+
+                //endings
             }
 
             /// display text and game options to screen based on the current scene
@@ -78,6 +119,7 @@ namespace FinalProject
             {
                 //opening scene
                 case 0:
+                    scoreLabel.Hide();
                     textLabel.Text = "Welcome to [Game Name]...ready for your adventure?" +
                         "\n\nPress the Space Bar to continue";
                     NLabel.Text = "";
@@ -85,6 +127,7 @@ namespace FinalProject
                     break;
                 //
                 case 1:
+                    scoreLabel.Hide();
                     textLabel.Text = "Dosen't matter if you're ready or not, which one of these boys capture your heart?";
                     NLabel.Text = "Johnny";
                     MLabel.Text = "Lucas";
@@ -241,7 +284,8 @@ namespace FinalProject
                     hide();
                     textLabel.BackColor = Color.OrangeRed;
                     textLabel.Text = "Keep conversation with Lucas! Collect 5000 points and move on," +
-                        " but get lower than 1000 and lose all hope. \n\nGood luck!" +
+                        " but get lower than 1000 and lose all hope. The purple balls will give you 100 points, but the" +
+                        " black ones will take away 100 points. \n\nGood luck!\nPress the Space Bar to start" +
                         "\n\n Press the Space Bar to continue";
                     break;
                 //
@@ -257,7 +301,8 @@ namespace FinalProject
                     textLabel.BackColor = Color.DarkMagenta;
                     textLabel.ForeColor = Color.White;
                     textLabel.Text = "Confess your feelings for Johnny! Collect 5000 points to be serious, " +
-                        "but get below 1000 and suffer. \n\nDo your best!";
+                        "but get below 1000 and suffer. The purple balls will give you 100 points, but the" +
+                        " black ones will take away 100 points. \n\nDo your best!";
                     break;
                 case 24:
                     textLabel.Text = "You never mention it again, why must you do this to yourself?";
@@ -266,36 +311,305 @@ namespace FinalProject
                     break;
                 case 25:
                     textLabel.Hide();
+                    scoreLabel.Show();
+                    gameTimer.Enabled = true;
                     break;
                 case 26:
                     textLabel.Hide();
+                    scoreLabel.Show();
+                    gameTimer.Enabled = true;
+                    break;
+                case 27:
+                    show();
+                    scoreLabel.Hide();
+                    textLabel.BackColor = Color.PaleVioletRed;
+                    textLabel.Text = "Welcome back, press the Space Bar to continue your adventure";
+                    NLabel.Text = "";
+                    MLabel.Text = "";
+                    break;
+                case 28:
+                    show();
+                    break;
+                case 29:
+                    textLabel.Text = "You manage to hold a decent conversation for over 20 minutes" +
+                        "\n\nPress the Space Bar to continue";
+                    NLabel.Text = "";
+                    MLabel.Text = "";
+                    break;
+                case 30:
+                    textLabel.Text = "GAME OVER: You ended up exposing your little crush on him" +
+                        "\n\nPress the Space Bar to continue";
+                    NLabel.Text = "";
+                    MLabel.Text = "";
+                    break;
+                case 31:
+                    textLabel.Text = "The bus comes to a halt as you arrive at your stop, you wave to say goodbye but he stops you " +
+                        "\n\nPress the Space Bar to continue";
+                    NLabel.Text = "";
+                    MLabel.Text = "";
+                    break;
+                case 32:
+                    textLabel.Text = "He simply laughs and brushes you off, you messed it up" +
+                        "\n\nPress the Space Bar to continue";
+                    NLabel.Text = "";
+                    MLabel.Text = "";
+                    break;
+                case 33:
+                    textLabel.Text = "'This may be a bit bold, but can I get your number?'";
+                    NLabel.Text = "'Oh...I'm not comfortable with that'";
+                    MLabel.Text = "'Sure'";
+                    break;
+                case 34:
+                    show();
+                    scoreLabel.Hide();
+                    textLabel.BackColor = Color.PaleVioletRed;
+                    textLabel.Text = "Welcome back, press the Space Bar to continue your adventure";
+                    NLabel.Text = "";
+                    MLabel.Text = "";
+                    break;
+                case 35:
+                    show();
+                    break;
+                case 36:
+                    textLabel.Text = "You agree (maybe a bit too quickly) and wish him a good day. Today was amazing" +
+                        "\n\nPress the Space Bar to continue";
+                    NLabel.Text = "";
+                    MLabel.Text = "";
+                    break;
+                case 37:
+                    textLabel.Text = "'Yeah that's totally fine!' He says embarrassed, he was too forward. Wasn't he? " +
+                        "\n\nPress the Space Bar to continue";
+                    NLabel.Text = "";
+                    MLabel.Text = "";
+                    break;
+
+                case 99:
                     break;
             }
 
 
             //move player during mini game
+            switch (e.KeyCode)
+            {
+                case Keys.Left:
+                    leftArrow = true;
+                    break;
+                case Keys.Right:
+                    rightArrow = true;
+                    break;
+            }
 
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
+
             //move player during mini game
+            switch (e.KeyCode)
+            {
+                case Keys.Left:
+                    leftArrow = false;
+                    break;
+                case Keys.Right:
+                    rightArrow = false;
+                    break;
+            }
+
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            //draw player
+            //johnny
+            if (gameTimer.Enabled == true && scene == 26)
+            {
+                //update labels 
+                scoreLabel.Text = $"Score: {score}";
 
-            //draw obsticals
+                //draw player
+                e.Graphics.FillRectangle(whiteBrush, playerX, playerY, playerWidth, playerHeight);
+
+                    //draw ground
+                    e.Graphics.FillRectangle(indigoBrush, 0, 500, 6000, 100);
+
+                    //draw obsticals
+                    for (int i = 0; i < ballXList.Count(); i++)
+                    {
+                        if (ballColourList[i] == "black")
+                        {
+                            e.Graphics.FillEllipse(blackBrush, ballXList[i], ballYList[i], ballSize, ballSize);
+                        }
+                        else if (ballColourList[i] == "purple")
+                        {
+                            e.Graphics.FillEllipse(purpleBrush, ballXList[i], ballYList[i], ballSize, ballSize);
+                        }
+                    }
+                
+                if (gameState == "pass")
+                {
+                    gameTimer.Enabled = false;
+                    textLabel.Show();
+                    textLabel.Text = "Woah! You did it!\n\nPress the Space Bar to continue";
+                }
+                else if (gameState == "lose")
+                {
+                    gameTimer.Enabled = false;                                                                                
+                    textLabel.Show();
+                    textLabel.Text = "Woah! You suck so bad!";
+                }
+            }
+            //lucas
+            else if (gameTimer.Enabled == true && scene == 25)
+            {
+                //update labels 
+                scoreLabel.Text = $"Score: {score}";
+
+                //draw player
+                e.Graphics.FillRectangle(whiteBrush, playerX, playerY, playerWidth, playerHeight);
+
+                //draw ground
+                e.Graphics.FillRectangle(coralBrush, 0, 500, 6000, 100);
+
+                //draw obsticals
+                for (int i = 0; i < ballXList.Count(); i++)
+                {
+                    if (ballColourList[i] == "black")
+                    {
+                        e.Graphics.FillEllipse(blackBrush, ballXList[i], ballYList[i], ballSize, ballSize);
+                    }
+                    else if (ballColourList[i] == "orange")
+                    {
+                        e.Graphics.FillEllipse(orangeBrush, ballXList[i], ballYList[i], ballSize, ballSize);
+                    }
+                }
+
+                if (gameState == "pass")
+                {
+                    gameTimer.Enabled = false;
+                    textLabel.Show();
+                    textLabel.Text = "Woah! You did it!\n\nPress the Space Bar to continue";
+                }
+                else if (gameState == "lose")
+                {
+                    gameTimer.Enabled = false;
+                    textLabel.Show();
+                    textLabel.Text = "Woah! You suck so bad!";
+                }
+            }
         }
 
         public void GameInitialize()
         {
 
+            gameTimer.Enabled = true;
+
+            score = 3000;
+
+            ballXList.Clear();
+            ballYList.Clear();
+            ballSpeedList.Clear();
+
+            playerX = this.Width / 2 - playerWidth / 2;
+            playerY = 490;
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
+            //move player
+            if (leftArrow == true && playerX > 0)
+            {
+                playerX -= playerSpeed;
+            }
+
+            if (rightArrow == true && playerX < this.Width - playerWidth)
+            {
+                playerX += playerSpeed;
+            }
+
+            //check to see if a new ball should be created 
+            randValue = randGen.Next(0, 51);
+
+            if (randValue < 7) //6% change of black ball, (lose points) 
+            {
+                ballXList.Add(randGen.Next(10, this.Width - ballSize * 2));
+                ballYList.Add(10);
+                ballSpeedList.Add(randGen.Next(2, 10));
+                ballColourList.Add("black");
+            }
+            else if (randValue >= 5 && randValue < 11) //4% change of purple ball, (get points) 
+            {
+                ballXList.Add(randGen.Next(10, this.Width - ballSize * 2));
+                ballYList.Add(10);
+                ballSpeedList.Add(randGen.Next(2, 10));
+                if (scene == 26)
+                {
+                    ballColourList.Add("purple");
+                }
+                else if(scene == 25)
+                {
+                    ballColourList.Add("orange");
+                }
+               
+            }
+
+            // move balls 
+            for (int i = 0; i < ballXList.Count(); i++)
+            {
+                ballYList[i] += ballSpeedList[i];
+            }
+
+            //check if ball is below play area and remove it if it is 
+            for (int i = 0; i < ballXList.Count(); i++)
+            {
+                if (ballYList[i] > 500)
+                {
+                    ballXList.RemoveAt(i);
+                    ballYList.RemoveAt(i);
+                    ballSpeedList.RemoveAt(i);
+                    ballColourList.RemoveAt(i);
+                    break;
+                }
+            }
+
+            //check collision of ball and paddle 
+            Rectangle playerRec = new Rectangle(playerX, playerY, playerWidth, playerHeight);
+
+            for (int i = 0; i < ballXList.Count(); i++)
+            {
+                Rectangle ballRec = new Rectangle(ballXList[i], ballYList[i], 10, 10);
+
+                if (playerRec.IntersectsWith(ballRec))
+                {
+                    if (ballColourList[i] == "purple")
+                    {
+                        score += 100;
+                    }
+                    else if (ballColourList[i] == "orange")
+                    {
+                        score += 100;
+                    }
+                    else if (ballColourList[i] == "black")
+                    {
+                        score -= 100;
+                    }
+
+                    ballXList.RemoveAt(i);
+                    ballYList.RemoveAt(i);
+                    ballSpeedList.RemoveAt(i);
+                    ballColourList.RemoveAt(i);
+                    break;
+                }
+            }
+
+            if (score == 3100)
+            { 
+                gameState = "pass";
+            }
+            else if (score == 2900)
+            {
+                gameState = "lose";
+            }
+
+            Refresh();
 
         }
 

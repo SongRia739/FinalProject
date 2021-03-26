@@ -36,6 +36,7 @@
             this.MBox = new System.Windows.Forms.PictureBox();
             this.NLabel = new System.Windows.Forms.Label();
             this.MLabel = new System.Windows.Forms.Label();
+            this.scoreLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sceneBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MBox)).BeginInit();
@@ -52,8 +53,8 @@
             // 
             // textLabel
             // 
-            this.textLabel.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textLabel.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.textLabel.Font = new System.Drawing.Font("Oranda BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textLabel.Location = new System.Drawing.Point(-4, 366);
             this.textLabel.Name = "textLabel";
             this.textLabel.Size = new System.Drawing.Size(1205, 130);
@@ -104,17 +105,30 @@
             this.MLabel.Text = "M Key";
             this.MLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // scoreLabel
+            // 
+            this.scoreLabel.Font = new System.Drawing.Font("italic 08_65", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.Location = new System.Drawing.Point(29, 26);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(250, 43);
+            this.scoreLabel.TabIndex = 6;
+            this.scoreLabel.Text = "Score: 3000";
+            this.scoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.MLabel);
             this.Controls.Add(this.NLabel);
             this.Controls.Add(this.MBox);
             this.Controls.Add(this.NBox);
             this.Controls.Add(this.textLabel);
             this.Controls.Add(this.sceneBox);
+            this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
@@ -136,6 +150,7 @@
         private System.Windows.Forms.PictureBox MBox;
         private System.Windows.Forms.Label NLabel;
         private System.Windows.Forms.Label MLabel;
+        private System.Windows.Forms.Label scoreLabel;
     }
 }
 
