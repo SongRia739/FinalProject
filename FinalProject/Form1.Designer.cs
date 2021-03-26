@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.sceneBox = new System.Windows.Forms.PictureBox();
+            this.sceneImage = new System.Windows.Forms.PictureBox();
             this.textLabel = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.NBox = new System.Windows.Forms.PictureBox();
@@ -37,24 +37,25 @@
             this.NLabel = new System.Windows.Forms.Label();
             this.MLabel = new System.Windows.Forms.Label();
             this.scoreLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.sceneBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sceneImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // sceneBox
+            // sceneImage
             // 
-            this.sceneBox.BackColor = System.Drawing.SystemColors.ControlText;
-            this.sceneBox.Location = new System.Drawing.Point(-4, 1);
-            this.sceneBox.Name = "sceneBox";
-            this.sceneBox.Size = new System.Drawing.Size(1190, 369);
-            this.sceneBox.TabIndex = 0;
-            this.sceneBox.TabStop = false;
+            this.sceneImage.BackColor = System.Drawing.SystemColors.ControlText;
+            this.sceneImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.sceneImage.Location = new System.Drawing.Point(-4, 1);
+            this.sceneImage.Name = "sceneImage";
+            this.sceneImage.Size = new System.Drawing.Size(1190, 369);
+            this.sceneImage.TabIndex = 0;
+            this.sceneImage.TabStop = false;
             // 
             // textLabel
             // 
             this.textLabel.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.textLabel.Font = new System.Drawing.Font("Oranda BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textLabel.Location = new System.Drawing.Point(-4, 366);
             this.textLabel.Name = "textLabel";
             this.textLabel.Size = new System.Drawing.Size(1205, 130);
@@ -107,7 +108,7 @@
             // 
             // scoreLabel
             // 
-            this.scoreLabel.Font = new System.Drawing.Font("italic 08_65", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scoreLabel.Location = new System.Drawing.Point(29, 26);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(250, 43);
@@ -127,14 +128,14 @@
             this.Controls.Add(this.MBox);
             this.Controls.Add(this.NBox);
             this.Controls.Add(this.textLabel);
-            this.Controls.Add(this.sceneBox);
+            this.Controls.Add(this.sceneImage);
             this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.sceneBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sceneImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MBox)).EndInit();
             this.ResumeLayout(false);
@@ -143,7 +144,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox sceneBox;
+        private System.Windows.Forms.PictureBox sceneImage;
         private System.Windows.Forms.Label textLabel;
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.PictureBox NBox;

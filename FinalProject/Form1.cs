@@ -20,7 +20,7 @@ namespace FinalProject
         int playerY = 490;
         int playerWidth = 100;
         int playerHeight = 10;
-        int playerSpeed = 10;
+        int playerSpeed = 30;
 
         List<int> ballXList = new List<int>();
         List<int> ballYList = new List<int>();
@@ -148,6 +148,7 @@ namespace FinalProject
                     break;
                 //
                 case 3:
+                    sceneImage.BackgroundImage = Properties.Resources.lucas_orange;
                     textLabel.Text = "Lucas: 6'3, 21 years old, drives a motorcycle" +
                         " as well as dated 2 girls and 1 guy at once." +
                         " He also bites his lip a lot for no reason and it makes him look stupid \n\nAre you sure?";
@@ -200,6 +201,7 @@ namespace FinalProject
                     break;
                 //
                 case 9:
+                    sceneImage.BackgroundImage = Properties.Resources.crowded_bus;
                     textLabel.Text = "What mattered now was how said man had his chest " +
                         "in direct contact with your back on the very crowded bus." +
                         " You purse your lips together in only slight annoyance and Lucas " +
@@ -224,6 +226,7 @@ namespace FinalProject
                     break;
                 //
                 case 12:
+                    sceneImage.BackgroundImage = Properties.Resources.park_scene;
                     textLabel.Text = "The park is bustling with little activity as a soft wind knocks some branches overhead together" +
                         "\n\nPress the Space Bar to continue";
                     NLabel.Text = "";
@@ -627,17 +630,16 @@ namespace FinalProject
                 }
             }
 
-            if (score == 3100)
+            if (score == 5000)
             { 
                 gameState = "pass";
             }
-            else if (score == 2900)
+            else if (score == 1000)
             {
                 gameState = "lose";
             }
 
             Refresh();
-
         }
 
         public void hide()
@@ -646,7 +648,7 @@ namespace FinalProject
             NBox.Hide();
             MLabel.Hide();
             MBox.Hide();
-            sceneBox.Hide();
+            sceneImage.Hide();
         }
 
         public void show()
@@ -655,7 +657,7 @@ namespace FinalProject
             NBox.Show();
             MLabel.Show();
             MBox.Show();
-            sceneBox.Show();
+            sceneImage.Show();
         }
     }
 }
