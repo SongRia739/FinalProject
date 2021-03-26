@@ -39,6 +39,7 @@ namespace FinalProject
         SolidBrush indigoBrush = new SolidBrush(Color.Indigo);
         SolidBrush blackBrush = new SolidBrush(Color.Black);
         SolidBrush whiteBrush = new SolidBrush(Color.White);
+        SolidBrush silverBrush = new SolidBrush(Color.Silver);
 
         Random randGen = new Random();
         int randValue = 0;
@@ -112,6 +113,11 @@ namespace FinalProject
                 else if (scene == 31) { scene = 33; }
 
                 //endings
+                else if (scene == 24) { scene = 99; }
+                else if (scene == 36) { scene = 99; }
+                else if (scene == 37) { scene = 99; }
+                else if (scene == 32) { scene = 99; }
+                else if (scene == 14) { scene = 99; }
             }
 
             /// display text and game options to screen based on the current scene
@@ -304,21 +310,25 @@ namespace FinalProject
                         "but get below 1000 and suffer. The purple balls will give you 100 points, but the" +
                         " black ones will take away 100 points. \n\nDo your best!";
                     break;
+                    //
                 case 24:
                     textLabel.Text = "You never mention it again, why must you do this to yourself?";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
+                    //
                 case 25:
                     textLabel.Hide();
                     scoreLabel.Show();
                     gameTimer.Enabled = true;
                     break;
+                    //
                 case 26:
                     textLabel.Hide();
                     scoreLabel.Show();
                     gameTimer.Enabled = true;
                     break;
+                    //
                 case 27:
                     show();
                     scoreLabel.Hide();
@@ -327,38 +337,45 @@ namespace FinalProject
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
+                    //
                 case 28:
                     show();
                     break;
+                    //
                 case 29:
                     textLabel.Text = "You manage to hold a decent conversation for over 20 minutes" +
                         "\n\nPress the Space Bar to continue";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
+                    //
                 case 30:
                     textLabel.Text = "GAME OVER: You ended up exposing your little crush on him" +
                         "\n\nPress the Space Bar to continue";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
+                    //
                 case 31:
                     textLabel.Text = "The bus comes to a halt as you arrive at your stop, you wave to say goodbye but he stops you " +
                         "\n\nPress the Space Bar to continue";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
+                    //
                 case 32:
                     textLabel.Text = "He simply laughs and brushes you off, you messed it up" +
                         "\n\nPress the Space Bar to continue";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
+                    //
                 case 33:
                     textLabel.Text = "'This may be a bit bold, but can I get your number?'";
                     NLabel.Text = "'Oh...I'm not comfortable with that'";
                     MLabel.Text = "'Sure'";
                     break;
+                    //
                 case 34:
                     show();
                     scoreLabel.Hide();
@@ -367,23 +384,29 @@ namespace FinalProject
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
+                    //
                 case 35:
                     show();
                     break;
+                    //
                 case 36:
                     textLabel.Text = "You agree (maybe a bit too quickly) and wish him a good day. Today was amazing" +
                         "\n\nPress the Space Bar to continue";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
+                    //
                 case 37:
                     textLabel.Text = "'Yeah that's totally fine!' He says embarrassed, he was too forward. Wasn't he? " +
                         "\n\nPress the Space Bar to continue";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
-
+                    //
                 case 99:
+                    textLabel.Text = "Play again?";
+                    NLabel.Text = "Yes";
+                    MLabel.Text = "No";
                     break;
             }
 
@@ -446,12 +469,14 @@ namespace FinalProject
                 
                 if (gameState == "pass")
                 {
+                    e.Graphics.FillRectangle(silverBrush, 0, 0, 1200, 600);
                     gameTimer.Enabled = false;
                     textLabel.Show();
                     textLabel.Text = "Woah! You did it!\n\nPress the Space Bar to continue";
                 }
                 else if (gameState == "lose")
                 {
+                    e.Graphics.FillRectangle(silverBrush, 0, 0, 1200, 600);
                     gameTimer.Enabled = false;                                                                                
                     textLabel.Show();
                     textLabel.Text = "Woah! You suck so bad!";
@@ -484,12 +509,14 @@ namespace FinalProject
 
                 if (gameState == "pass")
                 {
+                    e.Graphics.FillRectangle(silverBrush, 0, 0, 1200, 600);
                     gameTimer.Enabled = false;
                     textLabel.Show();
                     textLabel.Text = "Woah! You did it!\n\nPress the Space Bar to continue";
                 }
                 else if (gameState == "lose")
                 {
+                    e.Graphics.FillRectangle(silverBrush, 0, 0, 1200, 600);
                     gameTimer.Enabled = false;
                     textLabel.Show();
                     textLabel.Text = "Woah! You suck so bad!";
