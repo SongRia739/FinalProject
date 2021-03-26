@@ -62,6 +62,7 @@ namespace FinalProject
                 else if (scene == 17) { scene = 22; }
                 else if (scene == 19) { scene = 18; }
                 else if (scene == 22) { scene = 24; }
+                else if (scene == 23) { scene = 26; }
 
                 //lucas route
                 else if (scene == 5) { scene = 7; }
@@ -69,6 +70,7 @@ namespace FinalProject
                 else if (scene == 9) { scene = 11; }
                 else if (scene == 13) { scene = 16; }
                 else if (scene == 16) { scene = 21; }
+                else if (scene == 21) { scene = 25; }
             }
 
             /// display text and game options to screen based on the current scene
@@ -89,13 +91,17 @@ namespace FinalProject
                     break;
                 //
                 case 2:
-                    textLabel.Text = "Johnny: [some description] \n\nAre you sure?";
+                    textLabel.Text = "Johnny: 6'0, 22 years old, has a younger sister" +
+                        " and probably did drugs at one point but he'd never admit it." +
+                        " Also possibly a father of 3. \n\nAre you sure?";
                     NLabel.Text = "Yes";
                     MLabel.Text = "No";
                     break;
                 //
                 case 3:
-                    textLabel.Text = "Lucas: [some description] \n\nAre you sure?";
+                    textLabel.Text = "Lucas: 6'3, 21 years old, drives a motorcycle" +
+                        " as well as dated 2 girls and 1 guy at once." +
+                        " He also bites his lip a lot for no reason and it makes him look stupid \n\nAre you sure?";
                     NLabel.Text = "Yes";
                     MLabel.Text = "No";
                     break;
@@ -232,9 +238,11 @@ namespace FinalProject
                     break;
                 //
                 case 21:
-                    textLabel.Text = "Scene 21";
-                    NLabel.Text = "";
-                    MLabel.Text = "";
+                    hide();
+                    textLabel.BackColor = Color.OrangeRed;
+                    textLabel.Text = "Keep conversation with Lucas! Collect 5000 points and move on," +
+                        " but get lower than 1000 and lose all hope. \n\nGood luck!" +
+                        "\n\n Press the Space Bar to continue";
                     break;
                 //
                 case 22:
@@ -245,14 +253,22 @@ namespace FinalProject
                     break;
                 //
                 case 23:
-                    textLabel.Text = "Scene 23";
-                    NLabel.Text = "";
-                    MLabel.Text = "";
+                    hide();
+                    textLabel.BackColor = Color.DarkMagenta;
+                    textLabel.ForeColor = Color.White;
+                    textLabel.Text = "Confess your feelings for Johnny! Collect 5000 points to be serious, " +
+                        "but get below 1000 and suffer. \n\nDo your best!";
                     break;
                 case 24:
                     textLabel.Text = "You never mention it again, why must you do this to yourself?";
                     NLabel.Text = "";
                     MLabel.Text = "";
+                    break;
+                case 25:
+                    textLabel.Hide();
+                    break;
+                case 26:
+                    textLabel.Hide();
                     break;
             }
 
@@ -281,6 +297,24 @@ namespace FinalProject
         private void gameTimer_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        public void hide()
+        {
+            NLabel.Hide();
+            NBox.Hide();
+            MLabel.Hide();
+            MBox.Hide();
+            sceneBox.Hide();
+        }
+
+        public void show()
+        {
+            NLabel.Show();
+            NBox.Show();
+            MLabel.Show();
+            MBox.Show();
+            sceneBox.Show();
         }
     }
 }

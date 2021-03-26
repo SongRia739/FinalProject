@@ -32,13 +32,13 @@
             this.sceneBox = new System.Windows.Forms.PictureBox();
             this.textLabel = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.NBox = new System.Windows.Forms.PictureBox();
+            this.MBox = new System.Windows.Forms.PictureBox();
             this.NLabel = new System.Windows.Forms.Label();
             this.MLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sceneBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MBox)).BeginInit();
             this.SuspendLayout();
             // 
             // sceneBox
@@ -53,7 +53,7 @@
             // textLabel
             // 
             this.textLabel.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textLabel.Font = new System.Drawing.Font("Windsor Lt BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textLabel.Location = new System.Drawing.Point(-4, 366);
             this.textLabel.Name = "textLabel";
             this.textLabel.Size = new System.Drawing.Size(1205, 130);
@@ -67,23 +67,23 @@
             this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
-            // pictureBox1
+            // NBox
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Indigo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 499);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.NBox.BackColor = System.Drawing.Color.Indigo;
+            this.NBox.Location = new System.Drawing.Point(12, 499);
+            this.NBox.Name = "NBox";
+            this.NBox.Size = new System.Drawing.Size(100, 50);
+            this.NBox.TabIndex = 2;
+            this.NBox.TabStop = false;
             // 
-            // pictureBox2
+            // MBox
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.DarkViolet;
-            this.pictureBox2.Location = new System.Drawing.Point(625, 499);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.MBox.BackColor = System.Drawing.Color.DarkViolet;
+            this.MBox.Location = new System.Drawing.Point(625, 499);
+            this.MBox.Name = "MBox";
+            this.MBox.Size = new System.Drawing.Size(100, 50);
+            this.MBox.TabIndex = 3;
+            this.MBox.TabStop = false;
             // 
             // NLabel
             // 
@@ -111,8 +111,8 @@
             this.ClientSize = new System.Drawing.Size(1184, 561);
             this.Controls.Add(this.MLabel);
             this.Controls.Add(this.NLabel);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.MBox);
+            this.Controls.Add(this.NBox);
             this.Controls.Add(this.textLabel);
             this.Controls.Add(this.sceneBox);
             this.Name = "Form1";
@@ -121,8 +121,8 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.sceneBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -132,8 +132,8 @@
         private System.Windows.Forms.PictureBox sceneBox;
         private System.Windows.Forms.Label textLabel;
         private System.Windows.Forms.Timer gameTimer;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox NBox;
+        private System.Windows.Forms.PictureBox MBox;
         private System.Windows.Forms.Label NLabel;
         private System.Windows.Forms.Label MLabel;
     }
