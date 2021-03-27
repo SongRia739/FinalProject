@@ -63,6 +63,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap code {
+            get {
+                object obj = ResourceManager.GetObject("code", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap crowded_bus {
             get {
                 object obj = ResourceManager.GetObject("crowded_bus", resourceCulture);
@@ -76,6 +86,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap lucas_orange {
             get {
                 object obj = ResourceManager.GetObject("lucas_orange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lucas_smile {
+            get {
+                object obj = ResourceManager.GetObject("lucas_smile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -221,6 +221,7 @@ namespace FinalProject
                     break;
                 //
                 case 8:
+                    sceneImage.BackgroundImage = Properties.Resources.code;
                     textLabel.Text = "You let out a sigh as you mindlessly scanned " +
                         "through your assignment which was due in a few days. " +
                         "It was to create a game in 5 days, like seriously, who could do that?";
@@ -434,6 +435,7 @@ namespace FinalProject
                     break;
                 //
                 case 36:
+                    sceneImage.BackgroundImage = Properties.Resources.lucas_smile;
                     textLabel.Text = "You agree (maybe a bit too quickly) and wish him a good day. Today was amazing";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
