@@ -37,6 +37,7 @@
             this.NLabel = new System.Windows.Forms.Label();
             this.MLabel = new System.Windows.Forms.Label();
             this.scoreLabel = new System.Windows.Forms.Label();
+            this.instructionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sceneImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MBox)).BeginInit();
@@ -60,8 +61,7 @@
             this.textLabel.Name = "textLabel";
             this.textLabel.Size = new System.Drawing.Size(1205, 130);
             this.textLabel.TabIndex = 1;
-            this.textLabel.Text = "Welcome to [Game name], ready for your adventure?\r\n\r\nPress the Space bar to conti" +
-    "nue";
+            this.textLabel.Text = "Welcome to [Game name], ready for your adventure?\r\n\r\n";
             this.textLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gameTimer
@@ -71,7 +71,7 @@
             // 
             // NBox
             // 
-            this.NBox.BackColor = System.Drawing.Color.Indigo;
+            this.NBox.BackColor = System.Drawing.Color.CornflowerBlue;
             this.NBox.Location = new System.Drawing.Point(12, 499);
             this.NBox.Name = "NBox";
             this.NBox.Size = new System.Drawing.Size(100, 50);
@@ -80,7 +80,7 @@
             // 
             // MBox
             // 
-            this.MBox.BackColor = System.Drawing.Color.DarkViolet;
+            this.MBox.BackColor = System.Drawing.Color.Blue;
             this.MBox.Location = new System.Drawing.Point(625, 499);
             this.MBox.Name = "MBox";
             this.MBox.Size = new System.Drawing.Size(100, 50);
@@ -108,13 +108,26 @@
             // 
             // scoreLabel
             // 
+            this.scoreLabel.BackColor = System.Drawing.Color.Black;
             this.scoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.ForeColor = System.Drawing.Color.White;
             this.scoreLabel.Location = new System.Drawing.Point(29, 26);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(250, 43);
             this.scoreLabel.TabIndex = 6;
-            this.scoreLabel.Text = "Score: 3000";
             this.scoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // instructionLabel
+            // 
+            this.instructionLabel.BackColor = System.Drawing.Color.Navy;
+            this.instructionLabel.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.instructionLabel.ForeColor = System.Drawing.Color.White;
+            this.instructionLabel.Location = new System.Drawing.Point(330, 474);
+            this.instructionLabel.Name = "instructionLabel";
+            this.instructionLabel.Size = new System.Drawing.Size(529, 22);
+            this.instructionLabel.TabIndex = 7;
+            this.instructionLabel.Text = "Press the Space Bar to continue\r\n";
+            this.instructionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -122,6 +135,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.instructionLabel);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.MLabel);
             this.Controls.Add(this.NLabel);
@@ -130,7 +144,9 @@
             this.Controls.Add(this.textLabel);
             this.Controls.Add(this.sceneImage);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -152,6 +168,7 @@
         private System.Windows.Forms.Label NLabel;
         private System.Windows.Forms.Label MLabel;
         private System.Windows.Forms.Label scoreLabel;
+        private System.Windows.Forms.Label instructionLabel;
     }
 }
 
