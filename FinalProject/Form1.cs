@@ -12,6 +12,7 @@ using System.Media;
 
 namespace FinalProject
 {
+    //johnny's route is comeplete, save for the glitch in the game. finish up lucas and fix glitch later
     public partial class Form1 : Form
     {
         int scene = 0;
