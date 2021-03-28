@@ -187,8 +187,8 @@ namespace FinalProject
                 //
                 case 4:
                     textLabel.Text = "Having known Johnny for most of your teenage years up until now, " +
-                        "its safe to say you didn't know when these feelings arised. You let out a " +
-                        "groan as you fiddled with the pencil you fround on the ground 10 minutes ago. ";
+                        "its safe to say you didn't know when these feelings arised. You \nlet out a " +
+                        "groan as you fiddled with the pencil you found on the ground 10 minutes ago. ";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -203,7 +203,7 @@ namespace FinalProject
                     break;
                 //
                 case 6:
-                    textLabel.Text = "All you knew was that you were madly in love with your best friend " +
+                    textLabel.Text = "All you knew for certain is that you were madly in love with your best friend " +
                         "and didn't know what to do. Man this sucks.";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
@@ -242,8 +242,9 @@ namespace FinalProject
                     break;
                 //
                 case 10:
-                    textLabel.Text = "An unexpected arm puts you in a headlock but you let out a laugh as you realize who it is. " +
-                        "Johnny grins as he sits down beside you.";
+                    textLabel.Text = "An unexpected arm wraps you in a headlock. You preemptively flinch but let out a " +
+                        "somewhat relived laugh as you realize who it is. " +
+                        "The man in question grins as he sits down beside you.";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -257,7 +258,9 @@ namespace FinalProject
                 //
                 case 12:
                     sceneImage.BackgroundImage = Properties.Resources.park_scene;
-                    textLabel.Text = "The park is bustling with little activity as a soft wind knocks some branches overhead together";
+                    textLabel.Text = "The park is bustling with little activity as a soft breeze" +
+                        " knocks some overhead branches together, eliciting a soft melody that \nseemed to predict the upcoming " +
+                        "events";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -280,7 +283,9 @@ namespace FinalProject
                     break;
                 //
                 case 15:
-                    textLabel.Text = "Being your best-friend, Johnny notices quickly that something was off with you";
+                    textLabel.Text = "As your best-friend, Johnny instantly notices that something was on your mind." +
+                        " He's always been able to read you like an open book which is one of the reasons, you've fallen for " +
+                        "him in the first place";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -295,28 +300,30 @@ namespace FinalProject
                     break;
                 //
                 case 17:
-                    textLabel.Text = "Johnny shrugs, you'll tell him whenever you feel like it.";
+                    textLabel.Text = "Johnny is visibly upset but he simply shrugs it off in feigned indifference." +
+                        " You'll tell him when you feel like it.";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
                 //
                 case 18:
-                    textLabel.Text = "You inwardly groan";
+                    textLabel.Text = "You surpress rolling your eyes at his nature";
                     instructionLabel.Text = "Left: N key   Right: M key";
                     NLabel.Text = "There's actually something I want to tell you";
                     MLabel.Text = "It's really nothing";
                     break;
                 //
                 case 19:
-                    textLabel.Text = "You try to brush it off, but Johnny is insisting that something must be wrong.";
+                    textLabel.Text = "Trying to change the subject, you avoid eye contact but Johnny is persistant";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
                 //
                 case 20:
-                    textLabel.Text = "'What's up dude? I don't think I've seen you so quiet.' He remarks";
+                    textLabel.Text = "'Hey, what's up dude? I don't think I've seen you so quiet." +
+                        " At least not since you accidently called me babe.' He remarks with a suggestive grin";
                     instructionLabel.Text = "Left: N key   Right: M key";
                     NLabel.Text = "'Nothing Really'";
                     MLabel.Text = "'Actually...'";
@@ -342,14 +349,16 @@ namespace FinalProject
                     hide();
                     textLabel.BackColor = Color.DarkMagenta;
                     textLabel.ForeColor = Color.White;
-                    textLabel.Text = "Confess your feelings for Johnny! Collect 5000 points to be serious, " +
-                        "but get below 1000 and suffer. The purple balls will give you 100 points, but the" +
+                    textLabel.Text = "Confess your feelings for Johnny! Collect 5000 points to be truly meaningful, " +
+                        "but get below 1000 and suffer for all of erternity." +
+                        " The purple balls will give you 100 points, but the" +
                         " black ones will take away 100 points. \nDo your best!";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     break;
                 //
                 case 24:
-                    textLabel.Text = "You never mention it again, why must you do this to yourself?";
+                    textLabel.Text = "You hold your tongue from ever speaking about it again." +
+                        " Goddammit why must you be a coward?";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -392,6 +401,7 @@ namespace FinalProject
                     break;
                 //
                 case 30:
+                    show();
                     textLabel.Text = "GAME OVER: You ended up exposing your little crush on him";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
@@ -424,7 +434,7 @@ namespace FinalProject
                     scoreLabel.Hide();
                     instructionLabel.Show();
                     textLabel.BackColor = Color.PaleVioletRed;
-                    textLabel.Text = "Welcome back";
+                    textLabel.Text = "Welcome back, time to finalize your fate";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -450,28 +460,30 @@ namespace FinalProject
                     break;
                 //
                 case 38:
-                    textLabel.Text = "Johnny is quiet, you're serious...?";
+                    textLabel.Text = "Johnny looks slightly taken aback as you boldly claim" +
+                        " your feelings for him since forever-ago";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
                 //
                 case 39:
-                    textLabel.Text = "Johnny blurts out laughing the minute you stop talking ";
+                    textLabel.Text = "---";
                     instructionLabel.Text = "---";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
                 //
                 case 40:
-                    textLabel.Text = "He laughs, but its strained. That's what he thought";
+                    textLabel.Text = "His jaw clenches as an unfamiliar, bitter look is thrown your way." +
+                        " You can't joke about stuff like that you know?";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
                 //
                 case 41:
-                    textLabel.Text = "'Are you sure ?'";
+                    textLabel.Text = "'Are you sure?' He quietly asks";
                     instructionLabel.Text = "Left: N key   Right: M key";
                     NLabel.Text = "I've never been so sure in my life";
                     MLabel.Text = "Nah I was just messing with you";
@@ -480,7 +492,8 @@ namespace FinalProject
                 case 42:
                     show();
                     scoreLabel.Hide();
-                    textLabel.Text = "'You're hilarious bro!' He snorts, he didn't believe you";
+                    textLabel.Text = "'Haha, very funny dude' He snorts, he didn't believe you. But" +
+                        " who would be convinved in the first place?";
                     instructionLabel.Show();
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
@@ -488,14 +501,17 @@ namespace FinalProject
                     break;
                 //
                 case 43:
-                    textLabel.Text = "He grins";
+                    textLabel.Text = "A grin slowly etches on to his face";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
                 //
                 case 44:
-                    textLabel.Text = "'Thank god! Because me too!'";
+                    textLabel.Text = "'Took you long enough!' He shouts enthusiastically. " +
+                        "'I was starting to think you were only pretending to like me back!' " +
+                        "He wraps you \nin a hug that's a little too tight, but you wouldn't have" +
+                        " it any other way.";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -573,7 +589,8 @@ namespace FinalProject
                     e.Graphics.FillRectangle(silverBrush, 0, 0, 1200, 600);
                     gameTimer.Enabled = false;
                     textLabel.Show();
-                    textLabel.Text = "Woah! You did it!\n\nPress the Space Bar to continue";
+                    textLabel.Text = "It seems that you have finally got your feelings" +
+                        " under control!\n\nPress the Space Bar to continue";
                 }
                 else if (gameState == "lose")
                 {
@@ -581,7 +598,7 @@ namespace FinalProject
                     gameTimer.Enabled = false;
                     textLabel.Show();
                     textLabel.BackColor = Color.Red;
-                    textLabel.Text = "Woah! You suck so bad!\n\nPress the Enter key to continue";
+                    textLabel.Text = "Its clear you've never expressed your true feelings...\n\nPress the Enter key to continue";
                 }
             }
             //lucas
@@ -644,7 +661,7 @@ namespace FinalProject
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            //move player
+             //move player
             if (leftArrow == true && playerX > 0)
             {
                 playerX -= playerSpeed;
