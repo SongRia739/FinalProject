@@ -402,6 +402,7 @@ namespace FinalProject
                 //
                 case 30:
                     show();
+                    instructionLabel.Show();
                     textLabel.Text = "GAME OVER: You ended up exposing your little crush on him";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
