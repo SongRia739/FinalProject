@@ -50,7 +50,6 @@ namespace FinalProject
         public Form1()
         {
             InitializeComponent();
-
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -142,6 +141,7 @@ namespace FinalProject
                 else if (scene == 25) { scene = 28; }
                 else if (scene == 28) { scene = 30; }
                 else if (scene == 30) { scene = 32; }
+                else if (scene == 32) { scene = 39; }
             }
 
             /// display text and game options to screen based on the current scene
@@ -662,7 +662,7 @@ namespace FinalProject
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-             //move player
+            //move player
             if (leftArrow == true && playerX > 0)
             {
                 playerX -= playerSpeed;
