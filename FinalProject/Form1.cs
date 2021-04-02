@@ -196,7 +196,7 @@ namespace FinalProject
                 //
                 case 5:
                     textLabel.Text = "You and Lucas were in two different worlds, " +
-                        "it was hard to say that you two would have ever cross paths";
+                        "it was hard to say that you two would have ever cross paths...";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -211,10 +211,10 @@ namespace FinalProject
                     break;
                 //
                 case 7:
-                    textLabel.Text = "You kind of forget how you got a crush on such a jerk in the first place. " +
-                        "Was he ever mean to you though? No, but one time he accidently knocked your laptop over" +
-                        " and while it wasn't broken, you've always held a grudge. " +
-                        " But that did not matter now. ";
+                    textLabel.Text = "However, fate eventually lead you two to eachother. " +
+                        " Its strange to say, but only after a few random encounters, you developed " +
+                        "a (small)crush on the unattainable popular guy. I mean, uh, you could definitelly" +
+                        " attain him, you just didn't feel like it.";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -232,10 +232,10 @@ namespace FinalProject
                 //
                 case 9:
                     sceneImage.BackgroundImage = Properties.Resources.crowded_bus;
-                    textLabel.Text = "What mattered now was how said man had his chest " +
-                        "in direct contact with your back on the very crowded bus." +
-                        " You purse your lips together in only slight annoyance and Lucas " +
-                        "seemed to give zero personal space, not that you minded it THAT much though.";
+                    textLabel.Text = " Once again, fate finds you two stuck together. Literally. " +
+                        "\nLucas has his broad chest pressed up against your back as the other passengers" +
+                        " scuffle around you. The crowded bus felt hot, but your face felt hotter as" +
+                        " the tall man unintentionally invaded your personal space.";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -251,7 +251,8 @@ namespace FinalProject
                     break;
                 //
                 case 11:
-                    textLabel.Text = "The bus encounters a pothole and you feel Lucas' body jerk forward";
+                    textLabel.Text = "The bus seemed to have encounted a pothole as you " +
+                        "feel Lucas' body jerk forward into yours";
                     NLabel.Text = "Hold on to the railing and thank the stars for this opportunity";
                     MLabel.Text = "Try to use your shoulders to keep him upright";
                     break;
@@ -267,16 +268,19 @@ namespace FinalProject
                     break;
                 //
                 case 13:
-                    textLabel.Text = "To both of your surprise, you manage to keep steady as the bus passes the pot hole." +
-                        "He's quite surprised you seemed to help him without much effort, but you're quite surprised yourself.";
+                    textLabel.Text = "You deeproot your feet to the ground as the other man basically falls on you. " +
+                        "\n'Man his balance is garbage' you think as Lucas quickly regains his composure." +
+                        "\nYou gotta hand it to yourself for standing your ground, physically anyway. You were dying" +
+                        " on the inside";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
                 //
                 case 14:
-                    textLabel.Text = "Lucas lets out a somewhat unapologetic sorry and get's off at the next stop, it was nice while it lasted." +
-                        "You gently hit your head on the railing in defeat. \nWhat a jerk.";
+                    textLabel.Text = "Lucas apologizes softly, somewhat embarassed, as he regain's his posture." +
+                        " A sudden tension rises and you don't respond to \nhim out of shyness while Lucas interprets " +
+                        "your silence as anger. \nCommunication is key kids";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -292,8 +296,8 @@ namespace FinalProject
                     break;
                 //
                 case 16:
-                    textLabel.Text = "Curiosity gets the better of him, and Lucas starts talking to you. " +
-                        "You try to keep your cool, but how long can you hold up?";
+                    textLabel.Text = "Lucas apologozies but before an awkward silence can arise, strikes up a conversation." +
+                        "\nYou try to keep your cool, but how long can you hold up?";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -333,7 +337,7 @@ namespace FinalProject
                     hide();
                     textLabel.BackColor = Color.OrangeRed;
                     textLabel.Text = "Keep conversation with Lucas! Collect 5000 points and move on," +
-                        " but get lower than 1000 and lose all hope. The purple balls will give you 100 points, but the" +
+                        " but get lower than 1000 and lose all hope. The orange balls will \ngive you 100 points, but the" +
                         " black ones will take away 100 points. \nGood luck!";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     break;
@@ -403,7 +407,8 @@ namespace FinalProject
                 case 30:
                     show();
                     instructionLabel.Show();
-                    textLabel.Text = "GAME OVER: You ended up exposing your little crush on him";
+                    textLabel.Text = "You're not the best at expressing interest." +
+                        "\nLucas catches on swiftly and retreats from the conversation.";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -417,7 +422,8 @@ namespace FinalProject
                     break;
                 //
                 case 32:
-                    textLabel.Text = "He simply laughs and brushes you off, you messed it up";
+                    textLabel.Text = "You inwardly groan at yourself as you watch Lucas eventually exit the bus." +
+                        "\nGoddammit.";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -599,7 +605,7 @@ namespace FinalProject
                     gameTimer.Enabled = false;
                     textLabel.Show();
                     textLabel.BackColor = Color.Red;
-                    textLabel.Text = "Its clear you've never expressed your true feelings...\n\nPress the Enter key to continue";
+                    textLabel.Text = "Its clear you cannot express your true feelings...\n\nPress the Enter key to continue";
                 }
             }
             //lucas
@@ -640,7 +646,7 @@ namespace FinalProject
                     gameTimer.Enabled = false;
                     textLabel.Show();
                     textLabel.BackColor = Color.Red;
-                    textLabel.Text = "Woah! You suck so bad! \n\nPress the Enter Key to continue";
+                    textLabel.Text = "You cannot hold a conversation to save your life... \n\nPress the Enter Key to continue";
                 }
             }
         }
