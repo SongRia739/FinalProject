@@ -387,7 +387,7 @@ namespace FinalProject
                     scoreLabel.Hide();
                     textLabel.BackColor = Color.PaleVioletRed;
                     instructionLabel.Show();
-                    textLabel.Text = "Welcome back";
+                    textLabel.Text = "Hello again, it seemed fate was on your side this time";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -398,7 +398,10 @@ namespace FinalProject
                     break;
                 //
                 case 29:
-                    textLabel.Text = "You manage to hold a decent conversation for over 20 minutes";
+                    textLabel.Text = "Your chours laughter filled the bus at Lucas' dumb joke. Time" +
+                        " seemed to go by in an instant as you talked with him along the ride. Conversation " +
+                        "flowed almost too naturally between you two as invisible sparks of electricity zapped " +
+                        "down your spine in \na pleasurable shiver.";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -415,7 +418,10 @@ namespace FinalProject
                     break;
                 //
                 case 31:
-                    textLabel.Text = "The bus comes to a halt as you arrive at your stop, you wave to say goodbye but he stops you ";
+                    textLabel.Text = "Very immersed into the conversation, you barely notice the familiar" +
+                        " scenery and realize that its your stop. \nYou make your way to the back of the bus to get off" +
+                        " and surprisingly, Lucas hurries to catch up." +
+                        "\n\n'Oh,' You say 'Is this your stop too?'";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -430,7 +436,8 @@ namespace FinalProject
                     break;
                 //
                 case 33:
-                    textLabel.Text = "'This may be a bit bold, but can I get your number?'";
+                    textLabel.Text = "'Uh no.' He answers. 'But before you go, is it possible for me to" +
+                        " get your number?'";
                     instructionLabel.Text = "Left: N key  Right: M key";
                     NLabel.Text = "'Oh...I'm not comfortable with that'";
                     MLabel.Text = "'Sure'";
@@ -441,6 +448,7 @@ namespace FinalProject
                     scoreLabel.Hide();
                     instructionLabel.Show();
                     textLabel.BackColor = Color.PaleVioletRed;
+                    textLabel.ForeColor = Color.Black;
                     textLabel.Text = "Welcome back, time to finalize your fate";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
@@ -453,14 +461,20 @@ namespace FinalProject
                 //
                 case 36:
                     sceneImage.BackgroundImage = Properties.Resources.lucas_smile;
-                    textLabel.Text = "You agree (maybe a bit too quickly) and wish him a good day. Today was amazing";
+                    textLabel.Text = "You agree, shocked that he asked YOU. Nonetheless, you " +
+                        "hand him your phone as he hands you his and the two of you fumble with them for" +
+                        " a few seconds. You don't even realize you missed your stop until the bus starts moving again. " +
+                        "You and Lucas turn to eachother in realization and before Lucas could get a word of " +
+                        "apology out, you grinned at him before doubling over in laughter" +
+                        "\n'I don't think I've ever been so distracted by someone!'";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
                 //
                 case 37:
-                    textLabel.Text = "'Yeah that's totally fine!' He says embarrassed, he was too forward. Wasn't he? ";
+                    textLabel.Text = "'Yeah that's totally fine!' He says embarrassed" +
+                        "\n\n[Why did you say that, what was the point of playing this game then??]";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -475,15 +489,16 @@ namespace FinalProject
                     break;
                 //
                 case 39:
-                    textLabel.Text = "---";
-                    instructionLabel.Text = "---";
+                    textLabel.Text = "Johnny covers his mouth to hold in his laugh and miserably fails";
+                    instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
                     break;
                 //
                 case 40:
                     textLabel.Text = "His jaw clenches as an unfamiliar, bitter look is thrown your way." +
-                        " You can't joke about stuff like that you know?";
+                        " 'You can't joke about stuff like that you know?' He spits." +
+                        "\n\n[I cannot belive you won the minigame and STILL lost lol]";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -638,7 +653,8 @@ namespace FinalProject
                     e.Graphics.FillRectangle(silverBrush, 0, 0, 1200, 600);
                     gameTimer.Enabled = false;
                     textLabel.Show();
-                    textLabel.Text = "Woah! You did it!\n\nPress the Space Bar to continue";
+                    textLabel.Text = "Wow, this certainly went better than last time...and" +
+                        " we both know how tragic THAT was \n\nPress the Space Bar to continue";
                 }
                 else if (gameState == "lose")
                 {

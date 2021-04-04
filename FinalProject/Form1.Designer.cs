@@ -47,9 +47,9 @@
             // 
             this.sceneImage.BackColor = System.Drawing.SystemColors.ControlText;
             this.sceneImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.sceneImage.Location = new System.Drawing.Point(-4, 1);
+            this.sceneImage.Location = new System.Drawing.Point(-4, -3);
             this.sceneImage.Name = "sceneImage";
-            this.sceneImage.Size = new System.Drawing.Size(1190, 369);
+            this.sceneImage.Size = new System.Drawing.Size(1190, 373);
             this.sceneImage.TabIndex = 0;
             this.sceneImage.TabStop = false;
             // 
