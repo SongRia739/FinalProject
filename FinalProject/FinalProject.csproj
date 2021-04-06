@@ -101,5 +101,11 @@
   <ItemGroup>
     <None Include="Resources\424235__aceinet__floyd-filtertron-da-shuffle.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\original.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-photo-426983.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

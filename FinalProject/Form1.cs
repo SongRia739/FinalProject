@@ -191,6 +191,7 @@ namespace FinalProject
                     break;
                 //johnny scene 1
                 case 4:
+                    sceneImage.BackgroundImage = Properties.Resources.daydream_johnny;
                     textLabel.Text = "Having known Johnny for most of your teenage years up until now, " +
                         "its safe to say you didn't know when these feelings arised. You \nlet out a " +
                         "groan as you fiddled with the pencil you found on the ground 10 minutes ago. ";
@@ -200,6 +201,7 @@ namespace FinalProject
                     break;
                 //
                 case 5:
+                    sceneImage.BackgroundImage = Properties.Resources.daydream_lucas;
                     textLabel.Text = "You and Lucas were in two different worlds, " +
                         "it was hard to say that you two would have ever cross paths...";
                     instructionLabel.Text = "Press the Space Bar to continue ";
