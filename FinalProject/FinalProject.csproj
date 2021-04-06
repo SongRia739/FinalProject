@@ -95,5 +95,11 @@
   <ItemGroup>
     <None Include="Resources\lucas-smile.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\439864__ispeakwaves__constellation-upbeat-spacey-song %281%29.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\424235__aceinet__floyd-filtertron-da-shuffle.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -89,6 +89,7 @@
             // 
             // NLabel
             // 
+            this.NLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NLabel.Location = new System.Drawing.Point(129, 499);
             this.NLabel.Name = "NLabel";
             this.NLabel.Size = new System.Drawing.Size(432, 50);
@@ -99,6 +100,7 @@
             // MLabel
             // 
             this.MLabel.BackColor = System.Drawing.Color.Transparent;
+            this.MLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MLabel.Location = new System.Drawing.Point(740, 502);
             this.MLabel.Name = "MLabel";
             this.MLabel.Size = new System.Drawing.Size(432, 50);
