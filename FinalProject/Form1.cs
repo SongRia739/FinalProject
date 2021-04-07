@@ -12,7 +12,7 @@ using System.Media;
 using System.IO;
 
 namespace FinalProject
-{
+{            //finish lucas audios
     public partial class Form1 : Form
     {
         int scene = 0;
@@ -56,17 +56,18 @@ namespace FinalProject
         SoundPlayer wind = new SoundPlayer(Properties.Resources.wind);
         SoundPlayer badEnding = new SoundPlayer(Properties.Resources.badending_piano);
         SoundPlayer johnnyGoodEnding = new SoundPlayer(Properties.Resources.johnnyGoodEnding);
+        SoundPlayer lucasGoodEnding = new SoundPlayer(Properties.Resources.lucasGoodEnding);
         System.Windows.Media.MediaPlayer game = new System.Windows.Media.MediaPlayer();
 
         public Form1()
         {
             InitializeComponent();
 
+            //game sound
             game.Open(new Uri(Application.StartupPath + "/Resources/516950__m71art__jamm.wav"));
             game.MediaEnded += new EventHandler(game_MediaEnded);
         }
         private void game_MediaEnded(object sender, EventArgs e)
-
         {
             game.Stop();
             game.Play();
@@ -281,6 +282,7 @@ namespace FinalProject
                     crowdedBus.Play();
                     textLabel.Text = "The bus seemed to have encounted a pothole as you " +
                         "feel Lucas' body jerk forward into yours.";
+                    instructionLabel.Text = "Left: N key  Right: M key";
                     NLabel.Text = "Hold on to the railing and thank the stars for this opportunity";
                     MLabel.Text = "Try to use your shoulders to keep him upright";
                     break;
@@ -422,6 +424,7 @@ namespace FinalProject
                     scoreLabel.Hide();
                     textLabel.BackColor = Color.PaleVioletRed;
                     instructionLabel.Show();
+                    lucas.Play();
                     textLabel.Text = "Hello again, it seemed fate was on your side this time.";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
@@ -497,6 +500,7 @@ namespace FinalProject
                     break;
                 //
                 case 36:
+                    lucasGoodEnding.Play();
                     sceneImage.BackgroundImage = Properties.Resources.lucas_smile;
                     textLabel.Text = "You agree, shocked that he asked YOU. Nonetheless, you " +
                         "hand him your phone as he hands you his and the two of you fumble with them for" +
@@ -510,6 +514,7 @@ namespace FinalProject
                     break;
                 //
                 case 37:
+                    badEnding.Play();
                     textLabel.Text = "'Yeah that's totally fine!' He says embarrassed." +
                         "\n\n[Why did you say that, what was the point of playing this game then??]";
                     instructionLabel.Text = "Press the Space Bar to continue ";
@@ -660,6 +665,7 @@ namespace FinalProject
                     gameTimer.Enabled = false;
                     textLabel.Show();
                     textLabel.BackColor = Color.Red;
+                    game.Stop();
                     badEnding.Play();
                     textLabel.Text = "It's clear you cannot express your true feelings...\n\nPress the Enter key to continue";
                 }
@@ -703,8 +709,9 @@ namespace FinalProject
                     gameTimer.Enabled = false;
                     textLabel.Show();
                     textLabel.BackColor = Color.Red;
+                    game.Stop();
                     badEnding.Play();
-                    textLabel.Text = "You cannot hold a conversation to save your life... \n\nPress the Enter Key to continue";
+                    textLabel.Text = "You cannot hold a conversation to save your life... \n\nPress the Enter Key twice to continue";
                 }
             }
         }

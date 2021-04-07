@@ -187,6 +187,15 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream lucasGoodEnding {
+            get {
+                return ResourceManager.GetStream("lucasGoodEnding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream opening {
             get {
                 return ResourceManager.GetStream("opening", resourceCulture);
