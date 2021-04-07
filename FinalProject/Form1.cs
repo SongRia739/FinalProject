@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Media;
+using System.IO;
 
 namespace FinalProject
 {
@@ -49,16 +50,26 @@ namespace FinalProject
 
         //sounds
         SoundPlayer opening = new SoundPlayer(Properties.Resources.opening);
-        SoundPlayer johnnyStart = new SoundPlayer(Properties.Resources.johnnystart);
+        SoundPlayer johnny = new SoundPlayer(Properties.Resources.johnny);
         SoundPlayer recordScratch = new SoundPlayer(Properties.Resources.record_scratch);
         SoundPlayer treeBranches = new SoundPlayer(Properties.Resources.trees);
         SoundPlayer badEnding = new SoundPlayer(Properties.Resources.badending_piano);
+        SoundPlayer johnnyGoodEnding = new SoundPlayer(Properties.Resources.johnnyGoodEnding);
+        System.Windows.Media.MediaPlayer game = new System.Windows.Media.MediaPlayer();
 
         public Form1()
         {
             InitializeComponent();
-        }
 
+            game.Open(new Uri(Application.StartupPath + "/Resources/516950__m71art__jamm.wav"));
+            game.MediaEnded += new EventHandler(game_MediaEnded);
+        }
+        private void game_MediaEnded(object sender, EventArgs e)
+
+        {
+            game.Stop();
+            game.Play();
+        }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.M)  //choice 1
@@ -197,7 +208,7 @@ namespace FinalProject
                 //johnny scene 1
                 case 4:
                     sceneImage.BackgroundImage = Properties.Resources.daydream_johnny;
-                    johnnyStart.Play();
+                    johnny.Play();
                     textLabel.Text = "Having known Johnny for most of your teenage years up until now, " +
                         "its safe to say you didn't know when these feelings arised. You \nlet out a " +
                         "groan as you fiddled with the pencil you found on the ground 10 minutes ago. ";
@@ -367,6 +378,7 @@ namespace FinalProject
                 //
                 case 23:
                     hide();
+                    game.Play();
                     textLabel.BackColor = Color.DarkMagenta;
                     textLabel.ForeColor = Color.White;
                     textLabel.Text = "Confess your feelings for Johnny! Collect 5000 points to be truly meaningful, " +
@@ -460,6 +472,8 @@ namespace FinalProject
                     break;
                 //
                 case 34:
+                    game.Stop();
+                    johnny.Play();
                     show();
                     scoreLabel.Hide();
                     instructionLabel.Show();
@@ -512,6 +526,7 @@ namespace FinalProject
                     break;
                 //
                 case 40:
+                    badEnding.Play();
                     textLabel.Text = "His jaw clenches as an unfamiliar, bitter look is thrown your way." +
                         " 'You can't joke about stuff like that you know?' He spits." +
                         "\n\n[I cannot belive you won the minigame and STILL lost lol]";
@@ -539,6 +554,7 @@ namespace FinalProject
                     break;
                 //
                 case 43:
+                    johnnyGoodEnding.Play();
                     textLabel.Text = "A grin slowly etches on to his face.";
                     instructionLabel.Text = "Press the Space Bar to continue ";
                     NLabel.Text = "";
@@ -637,7 +653,8 @@ namespace FinalProject
                     gameTimer.Enabled = false;
                     textLabel.Show();
                     textLabel.BackColor = Color.Red;
-                    textLabel.Text = "Its clear you cannot express your true feelings...\n\nPress the Enter key to continue";
+                    badEnding.Play();
+                    textLabel.Text = "It's clear you cannot express your true feelings...\n\nPress the Enter key to continue";
                 }
             }
             //lucas
@@ -679,6 +696,7 @@ namespace FinalProject
                     gameTimer.Enabled = false;
                     textLabel.Show();
                     textLabel.BackColor = Color.Red;
+                    badEnding.Play();
                     textLabel.Text = "You cannot hold a conversation to save your life... \n\nPress the Enter Key to continue";
                 }
             }

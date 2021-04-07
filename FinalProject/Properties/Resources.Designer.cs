@@ -110,6 +110,24 @@ namespace FinalProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream game {
+            get {
+                return ResourceManager.GetStream("game", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream johnny {
+            get {
+                return ResourceManager.GetStream("johnny", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap johnny_white {
@@ -122,9 +140,9 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream johnnystart {
+        internal static System.IO.UnmanagedMemoryStream johnnyGoodEnding {
             get {
-                return ResourceManager.GetStream("johnnystart", resourceCulture);
+                return ResourceManager.GetStream("johnnyGoodEnding", resourceCulture);
             }
         }
         
