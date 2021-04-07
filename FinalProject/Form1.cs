@@ -49,6 +49,10 @@ namespace FinalProject
 
         //sounds
         SoundPlayer opening = new SoundPlayer(Properties.Resources.opening);
+        SoundPlayer johnnyStart = new SoundPlayer(Properties.Resources.johnnystart);
+        SoundPlayer recordScratch = new SoundPlayer(Properties.Resources.record_scratch);
+        SoundPlayer treeBranches = new SoundPlayer(Properties.Resources.trees);
+        SoundPlayer badEnding = new SoundPlayer(Properties.Resources.badending_piano);
 
         public Form1()
         {
@@ -155,7 +159,7 @@ namespace FinalProject
                     opening.Play();
                     textLabel.BackColor = Color.PaleVioletRed;
                     scoreLabel.Hide();
-                    textLabel.Text = "Welcome to [Game Name]...ready for your adventure?";
+                    textLabel.Text = "Welcome to RDS...ready for your adventure?";
                     instructionLabel.Text = "Press the Space Bar to continue";
                     NLabel.Text = "";
                     MLabel.Text = "";
@@ -172,6 +176,7 @@ namespace FinalProject
                     break;
                 //johnny introduction
                 case 2:
+                    sceneImage.BackgroundImage = Properties.Resources.johnny_white;
                     textLabel.Text = "Johnny: 6'0, 22 years old, has a younger sister" +
                         " and probably did drugs at one point but he'd never admit it." +
                         " \nAlso possibly a father of 3. \nAre you sure?";
@@ -192,6 +197,7 @@ namespace FinalProject
                 //johnny scene 1
                 case 4:
                     sceneImage.BackgroundImage = Properties.Resources.daydream_johnny;
+                    johnnyStart.Play();
                     textLabel.Text = "Having known Johnny for most of your teenage years up until now, " +
                         "its safe to say you didn't know when these feelings arised. You \nlet out a " +
                         "groan as you fiddled with the pencil you found on the ground 10 minutes ago. ";
@@ -249,6 +255,7 @@ namespace FinalProject
                     break;
                 //johnny scene 4
                 case 10:
+                    recordScratch.Play();
                     textLabel.Text = "An unexpected arm wraps you in a headlock. You preemptively flinch but let out a " +
                         "somewhat relived laugh as you realize who it is. " +
                         "The man in question grins as he sits down beside you.";
@@ -266,6 +273,7 @@ namespace FinalProject
                 //johnny scene 5
                 case 12:
                     sceneImage.BackgroundImage = Properties.Resources.park_scene;
+                    treeBranches.Play();
                     textLabel.Text = "The park is bustling with little activity as a soft breeze" +
                         " knocks some overhead branches together, eliciting a soft melody that \nseemed to predict the upcoming " +
                         "events.";
@@ -311,6 +319,7 @@ namespace FinalProject
                     break;
                 //
                 case 17:
+                    badEnding.Play();
                     textLabel.Text = "Johnny is visibly upset but he simply shrugs it off in feigned indifference." +
                         " You'll tell him when you feel like it.";
                     instructionLabel.Text = "Press the Space Bar to continue ";

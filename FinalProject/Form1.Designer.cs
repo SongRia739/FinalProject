@@ -61,7 +61,7 @@
             this.textLabel.Name = "textLabel";
             this.textLabel.Size = new System.Drawing.Size(1205, 130);
             this.textLabel.TabIndex = 1;
-            this.textLabel.Text = "\r\n\r\nWelcome to [Game Name], ready for your adventure?\r\n\r\n";
+            this.textLabel.Text = "\r\n\r\nWelcome to R(ia\'s) D(ating) S(im), \r\nready for your adventure?\r\n\r\n";
             this.textLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gameTimer

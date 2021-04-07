@@ -107,5 +107,20 @@
   <ItemGroup>
     <None Include="Resources\pexels-photo-426983.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_2403 %281%29.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\342909__f0rest15__soft-piano.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lpko.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aq.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piano.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
