@@ -13,7 +13,6 @@ using System.IO;
 
 namespace FinalProject
 {
-    //johnny's route is comeplete, save for the glitch in the game. finish up lucas and fix glitch later
     public partial class Form1 : Form
     {
         int scene = 0;
@@ -47,12 +46,14 @@ namespace FinalProject
 
         Random randGen = new Random();
         int randValue = 0;
-
+          
         //sounds
         SoundPlayer opening = new SoundPlayer(Properties.Resources.opening);
         SoundPlayer johnny = new SoundPlayer(Properties.Resources.johnny);
+        SoundPlayer lucas = new SoundPlayer(Properties.Resources.lucas);
         SoundPlayer recordScratch = new SoundPlayer(Properties.Resources.record_scratch);
-        SoundPlayer treeBranches = new SoundPlayer(Properties.Resources.trees);
+        SoundPlayer crowdedBus = new SoundPlayer(Properties.Resources.bus);
+        SoundPlayer wind = new SoundPlayer(Properties.Resources.wind);
         SoundPlayer badEnding = new SoundPlayer(Properties.Resources.badending_piano);
         SoundPlayer johnnyGoodEnding = new SoundPlayer(Properties.Resources.johnnyGoodEnding);
         System.Windows.Media.MediaPlayer game = new System.Windows.Media.MediaPlayer();
@@ -218,6 +219,7 @@ namespace FinalProject
                     break;
                 //
                 case 5:
+                    lucas.Play();
                     sceneImage.BackgroundImage = Properties.Resources.daydream_lucas;
                     textLabel.Text = "You and Lucas were in two different worlds, " +
                         "it was hard to say that you two would have ever cross paths...";
@@ -276,6 +278,7 @@ namespace FinalProject
                     break;
                 //
                 case 11:
+                    crowdedBus.Play();
                     textLabel.Text = "The bus seemed to have encounted a pothole as you " +
                         "feel Lucas' body jerk forward into yours.";
                     NLabel.Text = "Hold on to the railing and thank the stars for this opportunity";
@@ -284,7 +287,7 @@ namespace FinalProject
                 //johnny scene 5
                 case 12:
                     sceneImage.BackgroundImage = Properties.Resources.park_scene;
-                    treeBranches.Play();
+                    wind.Play();
                     textLabel.Text = "The park is bustling with little activity as a soft breeze" +
                         " knocks some overhead branches together, eliciting a soft melody that \nseemed to predict the upcoming " +
                         "events.";
@@ -294,6 +297,7 @@ namespace FinalProject
                     break;
                 //
                 case 13:
+                    lucas.Play();
                     textLabel.Text = "You deeproot your feet to the ground as the other man basically falls on you. " +
                         "\n'Man his balance is garbage' you think as Lucas quickly regains his composure." +
                         "\nYou gotta hand it to yourself for standing your ground, physically anyway. You were dying" +
@@ -304,6 +308,7 @@ namespace FinalProject
                     break;
                 //
                 case 14:
+                    badEnding.Play();
                     textLabel.Text = "Lucas apologizes softly, somewhat embarassed, as he regain's his posture." +
                         " A sudden tension rises and you don't respond to \nhim out of shyness while Lucas interprets " +
                         "your silence as anger. \nCommunication is key kids!";
@@ -361,6 +366,8 @@ namespace FinalProject
                     break;
                 //
                 case 21:
+                    lucas.Stop();
+                    game.Play();
                     hide();
                     textLabel.BackColor = Color.OrangeRed;
                     textLabel.Text = "Keep conversation with Lucas! Collect 5000 points and move on," +

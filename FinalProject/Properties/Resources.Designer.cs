@@ -70,6 +70,15 @@ namespace FinalProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream bus {
+            get {
+                return ResourceManager.GetStream("bus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap code {
@@ -147,6 +156,15 @@ namespace FinalProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream lucas {
+            get {
+                return ResourceManager.GetStream("lucas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap lucas_orange {
@@ -197,9 +215,9 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream trees {
+        internal static System.IO.UnmanagedMemoryStream wind {
             get {
-                return ResourceManager.GetStream("trees", resourceCulture);
+                return ResourceManager.GetStream("wind", resourceCulture);
             }
         }
     }

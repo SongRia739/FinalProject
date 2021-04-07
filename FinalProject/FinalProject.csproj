@@ -132,5 +132,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\405561__inspectorj__wind-realistic-a.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\495482__valentinsosnitskiy__guitar-jam-in-ableton-live.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\447487__bmangelo__madrid-bus.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
