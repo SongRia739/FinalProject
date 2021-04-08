@@ -144,5 +144,8 @@
   <ItemGroup>
     <None Include="Resources\433023__samplingsamthemarylandman__happy-chord-progression.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00c972c3deed0917ffeee9642b83c154.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

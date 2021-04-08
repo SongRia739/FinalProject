@@ -163,6 +163,9 @@
   <data name="opening" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\439864__ispeakwaves__constellation-upbeat-spacey-song (1).wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="opening_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\00c972c3deed0917ffeee9642b83c154.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="park_scene" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\park-scene.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

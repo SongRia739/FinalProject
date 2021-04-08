@@ -12,7 +12,7 @@ using System.Media;
 using System.IO;
 
 namespace FinalProject
-{            //finish lucas audios
+{            
     public partial class Form1 : Form
     {
         int scene = 0;
@@ -169,7 +169,6 @@ namespace FinalProject
             {
                 //opening scene
                 case 0:
-                    opening.Play();
                     textLabel.BackColor = Color.PaleVioletRed;
                     scoreLabel.Hide();
                     textLabel.Text = "Welcome to RDS...ready for your adventure?";
@@ -180,6 +179,7 @@ namespace FinalProject
                 //opening continued
                 case 1:
                     opening.Play();
+                    sceneImage.BackgroundImage = Properties.Resources.opening_blue;
                     textLabel.BackColor = Color.PaleVioletRed;
                     scoreLabel.Hide();
                     textLabel.Text = "Doesn't matter if you're ready or not, which one of these boys capture your heart?";
@@ -280,7 +280,7 @@ namespace FinalProject
                 //
                 case 11:
                     crowdedBus.Play();
-                    textLabel.Text = "The bus seemed to have encounted a pothole as you " +
+                    textLabel.Text = "The bus seemed to have encountered a pothole as you " +
                         "feel Lucas' body jerk forward into yours.";
                     instructionLabel.Text = "Left: N key  Right: M key";
                     NLabel.Text = "Hold on to the railing and thank the stars for this opportunity";

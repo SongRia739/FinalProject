@@ -205,6 +205,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap opening_blue {
+            get {
+                object obj = ResourceManager.GetObject("opening_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap park_scene {
             get {
                 object obj = ResourceManager.GetObject("park_scene", resourceCulture);
