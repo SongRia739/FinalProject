@@ -182,7 +182,7 @@ namespace FinalProject
                     opening.Play();
                     textLabel.BackColor = Color.PaleVioletRed;
                     scoreLabel.Hide();
-                    textLabel.Text = "Dosen't matter if you're ready or not, which one of these boys capture your heart?";
+                    textLabel.Text = "Doesn't matter if you're ready or not, which one of these boys capture your heart?";
                     instructionLabel.Text = "Left: N key   Right: M key";
                     NLabel.Text = "Johnny";
                     MLabel.Text = "Lucas";
@@ -436,7 +436,7 @@ namespace FinalProject
                     break;
                 //
                 case 29:
-                    textLabel.Text = "Your chours laughter filled the bus at Lucas' dumb joke. Time" +
+                    textLabel.Text = "Your chorus laughter filled the bus at Lucas' dumb joke. Time" +
                         " seemed to go by in an instant as you talked with him along the ride. Conversation " +
                         "flowed almost too naturally between you two as invisible sparks of electricity zapped " +
                         "down your spine in \na pleasurable shiver.";
